@@ -1,5 +1,5 @@
 ## About
-This simple project implements "Shopping Cart" used on e-commerce websites. To learn more about how it works, checkout the #example section.
+This simple project implements "Shopping Cart" used on e-commerce websites. To learn more about how it works, checkout the [examples](README.md#examples) section.
 
 ## Motive
 1. Learn how to interact with Postgres using Golang.
@@ -8,7 +8,7 @@ This simple project implements "Shopping Cart" used on e-commerce websites. To l
 
 ## Pre-requisites
 1. Golang should be present on the host.
-2. Postgres server must be present/running on the host. It should have configurations as per configs.go(./configs/configs.go) file (or configs.go should be modified accordingly).
+2. Postgres server must be present/running on the host. It should have configurations as per [configs.go](./configs/configs.go) file (or configs.go should be modified accordingly).
 
 If Docker is present on the host then Postgres container with the required configurations can be started by running the following command:
 ```bash
@@ -46,7 +46,7 @@ DELETE /cart/:cartID/:productID
 
 Note: All the IDs used in this project are UUIDs.
 
-## Example
+## Examples
 
 1. Shopping Carts table is empty at the start.
 ```bash
@@ -130,7 +130,7 @@ shubham@Shubhams-MacBook-Pro ~ % curl http://localhost:3000/cart/b4b43f97-cdb6-4
 ```
 
 ## Non-standard Modules used
-1. Postgres driver - pgx
-2. REST server - gin/gonic
-3. Fake data generator - gofakeit
-4. UUID - google/uuid
+1. Postgres driver - [pgx](github.com/jackc/pgx)
+2. REST server - [gin-gonic](github.com/gin-gonic/gin)
+3. Fake data generator - [gofakeit](github.com/brianvoe/gofakeit)
+4. UUID - [google/uuid](github.com/google/uuid)
