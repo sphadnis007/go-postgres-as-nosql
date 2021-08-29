@@ -44,7 +44,9 @@ Deletes a product from the cart
 DELETE /cart/:cartID/:productID
 ```
 
-Note: All the IDs used in this project are UUIDs.
+
+* Note: All the IDs used in this project are UUIDs.
+
 
 ## Examples
 
