@@ -53,39 +53,24 @@ DELETE /cart/:cartID/:productID
 1. Shopping Carts table is empty at the start.
 ```bash
 curl http://localhost:3000/cart | python -m json.tool
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100     2  100     2    0     0    250      0 --:--:-- --:--:-- --:--:--   250
 []
 ```
 
-2. Added 3 carts in the DB with fake data.
+2. Added 3 carts in the DB with fake products data.
 ```bash
 curl -X POST http://localhost:3000/cart/add/3 | python -m json.tool
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100    51  100    51    0     0   5666      0 --:--:-- --:--:-- --:--:--  5666
 "{ cart_id: a79cee22-44a4-447a-87b8-8e5c07214dba }"
 
 curl -X POST http://localhost:3000/cart/add/1 | python -m json.tool
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100    51  100    51    0     0  10200      0 --:--:-- --:--:-- --:--:-- 10200
 "{ cart_id: c3bfa6d3-79be-445f-9e18-bafae2f7b60e }"
 
 curl -X POST http://localhost:3000/cart/add/2 | python -m json.tool
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100    51  100    51    0     0   7285      0 --:--:-- --:--:-- --:--:--  7285
 "{ cart_id: b4b43f97-cdb6-4b34-a173-891356ef6854 }"
 ```
 
 3. For - curl -X POST http://localhost:3000/cart/add/2 - call, we had received cart id as b4b43f97-cdb6-4b34-a173-891356ef6854. We can check products present in this cart.
 ```bash
 curl http://localhost:3000/cart/b4b43f97-cdb6-4b34-a173-891356ef6854 | python -m json.tool
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100   324  100   324    0     0  14727      0 --:--:-- --:--:-- --:--:-- 15428
 [
     {
         "category": "Objects",
@@ -109,18 +94,12 @@ curl http://localhost:3000/cart/b4b43f97-cdb6-4b34-a173-891356ef6854 | python -m
 4. Deleting "Carrot" from the above cart
 ```bash
 curl -X DELETE http://localhost:3000/cart/b4b43f97-cdb6-4b34-a173-891356ef6854/11531d65-0759-460a-9941-07407d223d9b | python -m json.tool 
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100    34  100    34    0     0   1307      0 --:--:-- --:--:-- --:--:--  1307
-"Product Removed from the Cart!!!"
+"{ Product Removed from the Cart!!! }"
 ```
 
 5. Rechecking if "Carrot" got removed or not.
 ```bash
 curl http://localhost:3000/cart/b4b43f97-cdb6-4b34-a173-891356ef6854 | python -m json.tool
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100   158  100   158    0     0  39500      0 --:--:-- --:--:-- --:--:-- 39500
 [
     {
         "category": "Objects",
