@@ -130,7 +130,7 @@ shubham@Shubhams-MacBook-Pro ~ % curl http://localhost:3000/cart/b4b43f97-cdb6-4
 ```
 
 ## Non-standard Modules used
-1. Postgres driver - [pgx](github.com/jackc/pgx)
-2. REST server - [gin-gonic](github.com/gin-gonic/gin)
-3. Fake data generator - [gofakeit](github.com/brianvoe/gofakeit)
-4. UUID - [google/uuid](github.com/google/uuid)
+1. Postgres driver - [pgx](https://github.com/jackc/pgx)
+2. REST server - [gin-gonic](https://github.com/gin-gonic/gin)
+3. Fake data generator - [gofakeit](https://github.com/brianvoe/gofakeit)
+4. UUID - [google/uuid](https://github.com/google/uuid)
