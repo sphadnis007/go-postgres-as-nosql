@@ -1,5 +1,5 @@
 ## About
-This simple project implements "Shopping Cart" used on e-commerce websites. It is a common shopping cart used to store data of all users and their corresponding carts. It has only one table "cart" which stores array of products with details as a json blob in the database.
+This simple project implements "Shopping Cart" used on e-commerce websites. To learn more about how it works, checkout the #example section.
 
 ## Motive
 1. Learn how to interact with Postgres using Golang.
@@ -8,7 +8,7 @@ This simple project implements "Shopping Cart" used on e-commerce websites. It i
 
 ## Pre-requisites
 1. Golang should be present on the host.
-2. Postgres server must be present/running on the host. It should have configurations as per ./configs/configs.go file (or configs.go should be modified accordingly).
+2. Postgres server must be present/running on the host. It should have configurations as per configs.go(./configs/configs.go) file (or configs.go should be modified accordingly).
 
 If Docker is present on the host then Postgres container with the required configurations can be started by running the following command:
 ```bash
